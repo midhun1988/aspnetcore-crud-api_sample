@@ -13,11 +13,11 @@ namespace CRUDAPI.Helpers
 { 
     public class ValidateClass1
     {
-        SqlConnection cn = new SqlConnection("Data Source=ISETC-CC101-MVS\\MSSQLSERVER22;Password=midhun123@@;User ID=sa;Database=dbUTASAAPI");
+        SqlConnection cn = new SqlConnection("Data Source=****;Password=****;User ID=**;Database=***");
         public string GetUname()
         {
             string uname = string.Empty;
-            string sSql = "SELECT top 1 api_userkey ,api_passkey FROM [dbUTASAAPI].[dbo].[tblUTASAPIKey]";
+            string sSql = "SELECT top 1 api_userkey ,api_passkey FROM [dbo].[tblUTASAPIKey]";
             SqlDataAdapter sd = new SqlDataAdapter(sSql, cn);
             DataTable dt = new DataTable();
             sd.Fill(dt);
@@ -28,7 +28,7 @@ namespace CRUDAPI.Helpers
         public string GetPass()
         {
             string uname = string.Empty;
-            string sSql = "SELECT top 1 api_userkey ,api_passkey FROM [dbUTASAAPI].[dbo].[tblUTASAPIKey]";
+            string sSql = "SELECT top 1 api_userkey ,api_passkey FROM [dbo].[tblUTASAPIKey]";
             SqlDataAdapter sd = new SqlDataAdapter(sSql, cn);
             DataTable dt = new DataTable();
             sd.Fill(dt);
@@ -39,7 +39,7 @@ namespace CRUDAPI.Helpers
         public bool chkusercnt(string uname1,string pass1)
         {
             bool val;
-            string sSql = "SELECT count(*) as pass_cnt FROM [dbUTASAAPI].[dbo].[tblUTASAPIKey] where api_userkey = '" + Convert.ToString(uname1) + "' and api_passkey = '" + Convert.ToString(pass1) + "' and flag = 1";
+            string sSql = "SELECT count(*) as pass_cnt FROM [dbo].[tblUTASAPIKey] where api_userkey = '" + Convert.ToString(uname1) + "' and api_passkey = '" + Convert.ToString(pass1) + "' and flag = 1";
             SqlDataAdapter sd = new SqlDataAdapter(sSql, cn);
             DataTable dt = new DataTable();
             sd.Fill(dt);
