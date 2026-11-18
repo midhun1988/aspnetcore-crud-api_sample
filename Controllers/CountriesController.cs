@@ -1,5 +1,6 @@
 ﻿using CRUDAPI.Model;
 using Dapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 //using Microsoft.Data.SqlClient;
 using System.Data;
@@ -9,6 +10,7 @@ namespace CRUDAPI.Controllers
 {
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class CountriesController : ControllerBase
 {
     private readonly string _connectionString;

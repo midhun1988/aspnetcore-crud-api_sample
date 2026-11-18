@@ -16,6 +16,7 @@ using Dapper;
 
 namespace CRUDAPI.Controllers
 {
+    [Authorize]
     public class EmployeesController : Controller
     {
         public readonly IConfiguration _configration;
