@@ -112,7 +112,7 @@ INSERT [dbo].[Employees] ([Id], [Name], [Position], [Salary], [GenderId], [DeptI
 INSERT [dbo].[Employees] ([Id], [Name], [Position], [Salary], [GenderId], [DeptId], [DesignationId], [Status_Id], [FirstNameEn], [FirstNameAr], [CivilIDNo], [PhotoPath], [DocumentPaths], [DateOfBirth], [CountryNameEn], [DeptName], [DesignationName], [GenderName], [NameAr], [NameEn], [SelectedSubjectIds], [StatusId], [Status_Name], [Title], [UniBranchNameEn], [CountryID], [StateID]) VALUES (18, N'test name 2', N'Software Developer (SD)', CAST(1 AS Decimal(18, 0)), 1, 2, 0, 1, N'test name 2', N'test name 2', N'112', N'', N'0', CAST(N'2018-02-05' AS Date), N'0', N'0', N'0', N'0', N'0', N'0', N'0', 0, N'0', N'0', N'0', NULL, NULL)
 SET IDENTITY_INSERT [dbo].[Employees] OFF
 GO
-INSERT [dbo].[tblAPIKey] ([id], [api_userkey], [api_passkey], [flag], [branch_id], [ipaddress]) VALUES (1, N'admin', N'password123', N'1', 1, NULL)
+INSERT [dbo].[tblAPIKey] ([id], [api_userkey], [api_passkey], [flag], [branch_id], [ipaddress]) VALUES (1, N'yourusername', N'yourpassword', N'1', 1, NULL)
 GO
 ALTER TABLE [dbo].[Amenities] ADD  DEFAULT ((1)) FOR [IsActive]
 GO
