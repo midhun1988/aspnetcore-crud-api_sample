@@ -8,7 +8,7 @@ A .NET 9 Web API demonstrating CRUD operations for amenities, countries, and emp
 - Employee lookup and CRUD endpoints
 - SQL Server data access using Dapper
 - Swagger/OpenAPI documentation in the Development environment
-- SQL Server schema and sample data script in [`dbscript.sql`](dbscript.sql)
+- SQL Server schema and sample data script in dbscript_toupdate.sql
 
 ## Tech stack
 
@@ -33,7 +33,7 @@ A .NET 9 Web API demonstrating CRUD operations for amenities, countries, and emp
    cd CRUDAPI_M
    ```
 
-2. Create the database and tables by running [`dbscript.sql`](dbscript.sql) in SQL Server. The script targets a database named `HotelDB`; create that database first if it does not already exist.
+2. Create the database and tables by running dbscript_toupdate.sql.
 
 3. Configure the `DefaultConnection` connection string for your SQL Server in local configuration or user secrets. Do not commit credentials or production secrets to the repository.
 
@@ -82,7 +82,7 @@ A .NET 9 Web API demonstrating CRUD operations for amenities, countries, and emp
 
 ## Database script and security
 
-`dbscript.sql` creates the `Amenities`, `Countries`, `Employees`, and `tblAPIKey` tables and inserts sample records. **Review and sanitize this script before sharing or running it in any environment.** It currently includes a seeded API username/password, and its sample employee records may contain personal data. Remove or replace sensitive values and rotate any credentials that may already have been used.
+`dbscript_toupdate.sql` creates the tables and inserts sample records. **Review and sanitize this script before sharing or running it in any environment.** It currently includes a seeded API username/password, and its sample employee records may contain personal data. Remove or replace sensitive values and rotate any credentials that may already have been used.
 
 ## License
 
