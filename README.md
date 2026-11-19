@@ -4,8 +4,8 @@ A .NET 9 Web API demonstrating CRUD operations for amenities, countries, and emp
 
 ## Features
 
-- Create, read, update, and delete amenities and countries
-- Employee lookup and CRUD endpoints
+- Create, read, update, and delete.
+- lookup and CRUD endpoints
 - SQL Server data access using Dapper
 - Swagger/OpenAPI documentation in the Development environment
 - SQL Server schema and sample data script in dbscript_toupdate.sql
